@@ -1,4 +1,4 @@
-broker,account,contract,exchange,volume,price,direction,offset,date,time
+#broker,account,contract,exchange,volume,price,direction,offset,date,time
 9999,******,TA705,CZCE,1,5426.00,1,0,20170111,21:40:29
 9999,******,i1709,DCE,49,547.50,1,0,20170111,10:42:07
 9999,******,i1705,DCE,49,595.50,0,0,20170111,10:42:07

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cut -f3 -d, trade_sample.csv | grep -v contract | sort | uniq
+grep -v "^#" trade_sample.csv | cut -f3 -d, | sort | uniq
