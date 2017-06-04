@@ -26,12 +26,12 @@ def stat_contract(contract, data):
     df_contract_long = df_contract[ df_contract['direction'] == 0 ]
     df_contract_short = df_contract[ df_contract['direction'] != 0 ]
 
-    df_contract_long_money = df_contract_long['price'] * df_contract_long['volume'] \
+    contract_long_money = df_contract_long['price'] * df_contract_long['volume'] \
                             * UNIT_PER_LOT[contract_to_commodity(contract)]
-    df_contract_short_money = df_contract_short['price'] * df_contract_short['volume'] \
+    contract_short_money = df_contract_short['price'] * df_contract_short['volume'] \
                             * UNIT_PER_LOT[contract_to_commodity(contract)]
 
-    win_money = df_contract_long_money.sum() - df_contract_short_money.sum()
+    win_money = contract_long_money.sum() - contract_short_money.sum()
     print contract, "win money:", win_money
 
 
